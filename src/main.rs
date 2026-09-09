@@ -24,7 +24,7 @@ fn main() {
         io::stdin()
         .read_line(&mut line)
         .expect("Failed to read line");
-    let express_line = String::new();
+    let express_line = line.trim(). to_string();
 	line.clear();
 
     println!("Define which number tier you are, 1, 2, or 3");
@@ -47,12 +47,12 @@ fn main() {
     }
 
     if destination == 1 {
-	if express_line == "Y" {
+	if express_line == "y" {
 		shipping_cost += 8.0;
 }
         } else {
             	shipping_cost *= 2.0;
-	if express_line == "Y" {
+	if express_line == "y" {
 		shipping_cost +=20.0;
         }
 }
