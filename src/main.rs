@@ -1,16 +1,16 @@
 use std::io;
 
 fn main() {
-    let mut express_val: i32 = 0;
     let mut shipping_cost: f64 = 0.0;
     let dis2: f64 = 10.0;
     let dis3: f64 = 20.0;
+
     println!("Enter weight");
     let mut line = String::new();	
     io::stdin()
         .read_line(&mut line)
         .expect("Failed to read line");
-    let weight: f64 = line.trim().parse().expect("Please type a numbxer");
+    let weight: f64 = line.trim().parse().expect("Please type a number");
 	line.clear();
 
     println!("Enter destination, 1=domestic, 2 =international");
@@ -20,7 +20,7 @@ fn main() {
     let destination: i32 = line.trim().parse().expect("Please type a number");
 	line.clear();
 
-    println!("express Y or N");
+    println!("express y or n");
         io::stdin()
         .read_line(&mut line)
         .expect("Failed to read line");
@@ -47,11 +47,12 @@ fn main() {
     }
 
     if destination == 1 {
-	if express_line = "Y" {
+	if express_line == "Y" {
 		shipping_cost += 8.0;
+}
         } else {
             	shipping_cost *= 2.0;
-	if express_line = "Y" {
+	if express_line == "Y" {
 		shipping_cost +=20.0;
         }
 }
