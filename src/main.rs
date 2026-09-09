@@ -47,18 +47,14 @@ fn main() {
     }
 
     if destination == 1 {
-        	shipping_cost += 0.0;
-	if express_line == "Y" {
+	if express_line = "Y" {
 		shipping_cost += 8.0;
-	else if 
-}
         } else {
             	shipping_cost *= 2.0;
-	if express_line == "Y" {
-		shipping_cost *= 20.0;
+	if express_line = "Y" {
+		shipping_cost +=20.0;
         }
 }
-	
         if tier == 1 {
             shipping_cost += 0.0;
         }
