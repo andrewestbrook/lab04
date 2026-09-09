@@ -37,65 +37,38 @@ fn main() {
     if weight <= 1.0 {
         shipping_cost += 5.0;
     }
-    if weight > 1.0 && weight <= 5.0 {
+    else if weight <= 5.0 {
         shipping_cost += 12.0;
     }
-    if weight > 5.0 && weight <= 20.0 {
+    else if weight <= 20.0 {
         shipping_cost += 25.0;
     } else {
         shipping_cost += 50.0;
     }
 
-	// Get user input for if they are using expres
-
     if destination == 1 {
-    	if express_line == "Y" {
-        	express_val += 1;
-	}
-	        if express_val == 1 {
-        	    shipping_cost *= 2.0;
-            	    shipping_cost += 20.0;
+        	shipping_cost += 0.0;
+	if express_line == "Y" {
+		shipping_cost += 8.0;
+	else if 
+}
         } else {
-            express_val = 0;
+            	shipping_cost *= 2.0;
+	if express_line == "Y" {
+		shipping_cost *= 20.0;
         }
+}
+	
         if tier == 1 {
             shipping_cost += 0.0;
         }
-        if tier == 2 {
+        else if tier == 2 {
             let mut discounted_price = shipping_cost * (dis2 / 100.0);
             shipping_cost -= discounted_price;
         }
-        if tier == 3 {
+        else if tier == 3 {
             let mut discounted_price = shipping_cost * (dis3 / 100.0);
             shipping_cost -= discounted_price;
 	}
-	println!("Shipping Cost (shipping_cost):{shipping_cost}");
-    }
-
-
-    if destination == 2 {
-        if express_line == "Y" {
-            express_val += 1;
-        }
-
-	        if express_val == 1 {
-        	    shipping_cost *= 2.0;
-            	    shipping_cost += 20.0;
-        } else {
-            express_val = 0;
-        }
-        if tier == 1 {
-            shipping_cost += 0.0;
-        }
-        if tier == 2 {
-            let mut discounted_price = shipping_cost * (dis2 / 100.0);
-            shipping_cost -= discounted_price;
-        }
-        if tier == 3 {
-            let mut discounted_price = shipping_cost * (dis3 / 100.0);
-            shipping_cost -= discounted_price;
-        }
-        println!("Shipping Cost (shipping_cost):{shipping_cost}");
-    }
-
+	println!("Shipping Cost (shipping_cost):{shipping_cost}")
 }
